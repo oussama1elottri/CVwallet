@@ -1,0 +1,5 @@
+{
+  "name": "CVWallet MVP",
+  "description": "An application demonstrating the CVWallet concept. Users can connect data sources, consent to analysis, and receive an AI-generated skills attestation, simulating a secure, privacy-focused workflow.",
+  "requestFramePermissions": []
+}
