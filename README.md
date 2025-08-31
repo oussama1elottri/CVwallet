@@ -21,22 +21,6 @@ The planned architecture is designed for security, scalability, and trust.
 -   **LLM Oracle Engine:** A consensus-driven engine using multiple LLM models to analyze evidence. It produces a structured, aggregated score based on a predefined rubric, minimizing bias and improving reliability.
 -   **Blockchain Layer:** While private data remains off-chain, hashes of attestations are anchored to a public blockchain (like Ethereum or Polygon). This creates a tamper-evident, publicly verifiable record of a credential's existence and integrity.
 
-## User Workflow
-
-The process is designed to be simple for the candidate and trustworthy for the employer.
-
-```mermaid
-flowchart LR
-    A[Job page: "Apply with CVWallet"] --> B[CVWallet popup]
-    B --> C{Candidate consent?}
-    C -->|Yes| D[Collect local docs + VCs + Connectors]
-    D --> E[Send encrypted payload to Oracle (Confidential Compute)]
-    E --> F[LLM ensemble + static analyzers -> structured verdict]
-    F --> G[Aggregate & sign attestation]
-    G --> H[Return attestation to site (hash + metadata)]
-    H --> I[Employer verifies attestation + displays score]
-```
-
 ## Features (Prototype)
 
 This prototype demonstrates the core candidate-facing experience:
